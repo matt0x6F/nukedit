@@ -1,0 +1,11 @@
+{
+    "[svelte]": {
+        "editor.defaultFormatter": "svelte.svelte-vscode",
+        
+    },
+    "svelte.enable-ts-plugin": true,
+    "css.customData": [
+        ".vscode/tailwind.json",
+    ],
+    // "svelte.plugin.css.diagnostics.enable": false 
+}

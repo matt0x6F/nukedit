@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@steeze-ui/lucide-icons": "^1.2.0",
+    "@steeze-ui/svelte-icon": "^1.5.0",
+    "@tailwindcss/typography": "^0.5.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "i": "^0.3.7",
+    "npm": "^10.4.0"
+  }
+}
