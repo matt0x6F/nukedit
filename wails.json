@@ -10,5 +10,6 @@
   "author": {
     "name": "Matt Ouille",
     "email": "matt.ouille@protonmail.com"
-  }
+  },
+  "appargs": "--dry-run"
 }

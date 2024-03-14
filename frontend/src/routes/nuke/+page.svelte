@@ -4,6 +4,15 @@
 	import { Icon } from '@steeze-ui/svelte-icon';
 
     import NukeForm from '$lib/NukeForm.svelte';
+	import ScheduledNukes from '$lib/ScheduledNukes.svelte';
+    import { schedules as scheduleStore } from '../../stores/schedules';
+	import { models } from '$lib/wailsjs/go/models';
+
+    let scheduled: models.Schedule[] = [];
+
+    scheduleStore.subscribe((value) => {
+        scheduled = value;
+    });
 
     // page navigation
     let tabSet: number = 0;
@@ -16,7 +25,7 @@
             <svelte:fragment slot="lead"><Icon src="{Plus}" size="25px" class="color-gray-900 mx-auto" /></svelte:fragment>
             <span>New</span>
         </Tab>
-        <Tab bind:group={tabSet} name="tab2" value={1}>
+        <Tab bind:group={tabSet} name="tab2" value={1} disabled>
             <svelte:fragment slot="lead"><Icon src="{Calendar}" size="25px" class="color-gray-900 mx-auto" /></svelte:fragment>
             <span>Scheduled</span>
         </Tab>
@@ -25,13 +34,7 @@
             {#if tabSet === 0}
                 <NukeForm />
             {:else if tabSet === 1}
-                <!-- list scheduled nukes the user has already created -->
-                <div class="my-2">
-                    <div class="font-semibold">Scheduled nukes</div>
-                    <ul class="list-disc list-inside">
-                        <li>None</li>
-                    </ul>
-                </div>
+                <ScheduledNukes scheduled={scheduled} />
             {/if}
         </svelte:fragment>
     </TabGroup>

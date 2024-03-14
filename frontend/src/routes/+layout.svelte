@@ -2,12 +2,13 @@
 	import '../app.pcss';
 
 	import { Icon } from '@steeze-ui/svelte-icon'
-	import { Home, Settings, Bomb } from '@steeze-ui/lucide-icons'
+	import { Home, Settings, Bomb, FlaskRound } from '@steeze-ui/lucide-icons'
 	import { AppShell, AppBar, AppRail, AppRailAnchor, LightSwitch, Toast, Modal, type ModalComponent, initializeStores, getModalStore, type ModalSettings } from '@skeletonlabs/skeleton';
 	
 	import { page } from '$app/stores';
 	import { active } from '../stores/account';
 	import SettingsModal from '$lib/SettingsModal.svelte';
+	import { dryRunMode } from '../stores/application';
 
 	initializeStores();
 
@@ -90,6 +91,11 @@
 			
 			<!-- --- -->
 			<svelte:fragment slot="trail">
+				{#if dryRunMode}
+				<AppRailAnchor title="Dry run mode enabled">
+					<Icon src="{FlaskRound}" size="25px" class="color-blue-500 mx-auto" />
+				</AppRailAnchor>
+				{/if}
 				{#if activeAccount !== ""}
 				<AppRailAnchor on:click={() => { modalStore.trigger(modal) }} title="Settings">
 					<Icon src="{Settings}" size="25px" class="color-gray-900 mx-auto"  />

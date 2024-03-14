@@ -18,12 +18,15 @@
 		"@playwright/test": "^1.28.1",
 		"@skeletonlabs/skeleton": "^2.7.1",
 		"@skeletonlabs/tw-plugin": "^0.3.1",
+		"@steeze-ui/lucide-icons": "^1.2.0",
+		"@steeze-ui/svelte-icon": "^1.5.0",
 		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@tailwindcss/forms": "^0.5.7",
+		"@tailwindcss/typography": "^0.5.10",
 		"@types/eslint": "8.56.0",
-		"@types/node": "^20.11.5",
+		"@types/node": "^20.11.17",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
 		"autoprefixer": "^10.4.16",
@@ -45,7 +48,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"cron-validate": "^1.4.5",
 		"path": "^0.12.7",
-		"require": "^2.4.20"
+		"require": "^2.4.20",
+		"svelte-scrolling": "^1.4.0"
 	}
 }

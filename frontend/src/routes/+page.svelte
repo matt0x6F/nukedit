@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Icon } from '@steeze-ui/svelte-icon'
 	import { Save } from '@steeze-ui/lucide-icons'
-	import { GetAccounts, SaveAccount, SetActive } from '$lib/wailsjs/go/accounts/Service';
+	import { GetAccounts, SaveAccount, SetActive } from '$lib/wailsjs/go/api/Accounts';
 	import { getToastStore, type ToastSettings } from '@skeletonlabs/skeleton';
 	import { active } from '../stores/account';
 	import { available } from '../stores/account';
