@@ -25,6 +25,12 @@ func main() {
 		return
 	}
 
+	err = db.Migrate()
+	if err != nil {
+		println("Error:", err.Error())
+		return
+	}
+
 	// Create an instance of the app structure
 	app := NewApp(*dryRun)
 	acct := api.NewAccountsService(db)
