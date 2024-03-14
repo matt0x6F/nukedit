@@ -19,8 +19,8 @@ func NewDatabaseConnection(path string) (*Database, error) {
 	return &Database{database: db}, nil
 }
 
-func Run(svc *Database) {
-	svc.database.AutoMigrate(&models.Account{}, &models.Config{}, &models.Schedule{})
+func (s *Database) Migrate() error {
+	return s.database.AutoMigrate(&models.Account{}, &models.Config{}, &models.Schedule{})
 }
 
 func (s *Database) Close() {
