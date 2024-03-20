@@ -7,12 +7,10 @@
 	
 	import { page } from '$app/stores';
 	import { active } from '../stores/account';
-	import SettingsModal from '$lib/SettingsModal.svelte';
 	import { dryRunMode } from '../stores/application';
+	import AddAccountForm from '$lib/AddAccountForm.svelte';
 
 	initializeStores();
-
-	const modalStore = getModalStore();
 
 	let activeAccount = "";
 
@@ -21,13 +19,8 @@
 	});
 
 	const modalRegistery: Record<string, ModalComponent> = {
-		settingsModal: { ref: SettingsModal },
+		addAccountModal: { ref: AddAccountForm }
 	};
-
-	const modal: ModalSettings = {
-		type: "component",
-		component: "settingsModal",
-	}
 </script>
 
 <Toast />
@@ -97,7 +90,7 @@
 				</AppRailAnchor>
 				{/if}
 				{#if activeAccount !== ""}
-				<AppRailAnchor on:click={() => { modalStore.trigger(modal) }} title="Settings">
+				<AppRailAnchor href="/settings" title="Settings">
 					<Icon src="{Settings}" size="25px" class="color-gray-900 mx-auto"  />
 				</AppRailAnchor>
 				{/if}

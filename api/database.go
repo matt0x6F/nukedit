@@ -36,6 +36,7 @@ func (s *Database) GetAccount(key string) (*models.Account, error) {
 
 func (s *Database) SaveAccount(clientID, clientSecret, username, password string, requirepw bool) (*models.Account, error) {
 	acct := &models.Account{
+		ID:              username,
 		ClientID:        clientID,
 		ClientSecret:    clientSecret,
 		Username:        username,
