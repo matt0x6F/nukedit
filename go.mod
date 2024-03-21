@@ -3,7 +3,7 @@ module github.com/matt0x6f/nukedit
 go 1.21
 
 require (
-	github.com/glebarez/sqlite v1.10.0
+	github.com/glebarez/sqlite v1.11.0
 	github.com/go-loremipsum/loremipsum v1.1.3
 	github.com/rs/zerolog v1.32.0
 	github.com/vartanbeno/go-reddit/v2 v2.0.1
