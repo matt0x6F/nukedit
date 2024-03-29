@@ -77,10 +77,10 @@
     {#each $accounts as account}
         <div class="flex items-center justify-between my-2">
             <div class="flex items-center">
-                <p class="ml-2">{account.username} 
-                    <button on:click={() => deleteAccount(account.username)}><Icon src={Delete} size="20px" class="color-gray-900 ml-2 mb-1 inline-block" /></button> 
+                <p class="ml-2">{account.username}
                     {#if account.username !== $active}
-                    <button on:click={() => switchToAccount(account.username)}><Icon src={ArrowLeftRight} size="20px" class="color-gray-900 ml-2 mb-1 inline-block" /></button>
+                    <button title="Delete account" on:click={() => deleteAccount(account.username)}><Icon src={Delete} size="20px" class="color-gray-900 ml-2 mb-1 inline-block" /></button> 
+                    <button title="Switch account" on:click={() => switchToAccount(account.username)}><Icon src={ArrowLeftRight} size="20px" class="color-gray-900 ml-2 mb-1 inline-block" /></button>
                     {/if}
                 </p>
             </div>
