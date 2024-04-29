@@ -8,7 +8,7 @@ require (
 	github.com/rs/zerolog v1.32.0
 	github.com/vartanbeno/go-reddit/v2 v2.0.1
 	github.com/wailsapp/wails/v2 v2.8.0
-	gorm.io/gorm v1.25.8
+	gorm.io/gorm v1.25.10
 )
 
 require (
