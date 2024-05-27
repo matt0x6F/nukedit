@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/glebarez/sqlite v1.11.0
 	github.com/go-loremipsum/loremipsum v1.1.3
-	github.com/rs/zerolog v1.32.0
+	github.com/rs/zerolog v1.33.0
 	github.com/vartanbeno/go-reddit/v2 v2.0.1
 	github.com/wailsapp/wails/v2 v2.8.0
 	gorm.io/gorm v1.25.8
